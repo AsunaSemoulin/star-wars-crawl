@@ -3,6 +3,10 @@ html {
 }
 
 body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background-image: url("./bg.png");
     color: yellow;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +14,7 @@ body {
 	transform-origin: 50% 100%;
 	transform: perspective(300px) rotateX(25deg);
     animation-name: scroll;
-    animation-duration: 3s;
+    animation-duration: 20s;
 }
 
 .story h1 {
@@ -19,9 +23,11 @@ body {
 
 @keyframes scroll {
 	0% {
-		transform: translateY(0%);
+		top: 100%;
+        opacity: 1;
 	}
 	100% {
-		transform: translateY(-100%);
+		top: -170%;
+        opacity: 0;
 	}
 }
